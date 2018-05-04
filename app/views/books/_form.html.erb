@@ -11,57 +11,65 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :book_title %>
+  <div class="row">
+    <div class="col-md-6 mb-3 field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :book_title, class: "form-control", placeholder: "Lady With One Blue Shoe" %>
+    </div>
+
+    <div class="col-md-6 mb-3 field">
+      <%= form.label :author %>
+      <%= form.text_field :author, id: :book_author, class: "form-control", placeholder: "Simona Johnson" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author, id: :book_author %>
+  <div class="row">
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :category %>
+      <%= form.text_field :category, id: :book_category, class: "form-control", placeholder: "Science Fiction" %>
+    </div>
+
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :cover_type %>
+      <%= form.text_field :cover_type, id: :book_cover_type, class: "form-control", placeholder: "Hardcover" %>
+    </div>
+
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :page_count %>
+      <%= form.number_field :page_count, id: :book_page_count, class: "form-control", placeholder: "100" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category, id: :book_category %>
+  <div class="row">
+    <div class="col-md-6 mb-3 field">
+      <%= form.label :publisher %>
+      <%= form.text_field :publisher, id: :book_publisher, class: "form-control", placeholder: "Simon & That Guy" %>
+    </div>
+
+    <div class="col-md-6 mb-3 field">
+      <%= form.label :language %>
+      <%= form.text_field :language, id: :book_language, class: "form-control", placeholder: "English" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cover_type %>
-    <%= form.text_field :cover_type, id: :book_cover_type %>
-  </div>
+  <div class="row">
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :isbn_ten, "ISBN-10" %>
+      <%= form.number_field :isbn_ten, id: :book_isbn_ten, class: "form-control", placeholder: "0890871167" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :page_count %>
-    <%= form.number_field :page_count, id: :book_page_count %>
-  </div>
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :dimensions %>
+      <%= form.text_field :dimensions, id: :book_dimensions, class: "form-control", placeholder: "8.4 x 5.8 x 0.7 inches" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :publisher %>
-    <%= form.text_field :publisher, id: :book_publisher %>
+    <div class="col-md-4 mb-3 field">
+      <%= form.label :price %>
+      <%= form.text_field :price, id: :book_price, class: "form-control", placeholder: "32.00" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :language %>
-    <%= form.text_field :language, id: :book_language %>
-  </div>
-
-  <div class="field">
-    <%= form.label :isbn_ten %>
-    <%= form.number_field :isbn_ten, id: :book_isbn_ten %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dimensions %>
-    <%= form.text_field :dimensions, id: :book_dimensions %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: :book_price %>
-  </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create", class: "btn btn-outline-primary btn-lg btn-block" %>
   </div>
 <% end %>
+<br class="mb-4">

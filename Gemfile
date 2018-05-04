@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.5.1'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -8,6 +10,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'bootstrap', '~> 4.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'popper_js', '~> 1.12', '>= 1.12.9'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
