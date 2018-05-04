@@ -1,0 +1,32 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+  <div class="row">
+    <div class="col-md-12 mb-3 field">
+      <%= s.label :keywords %><br />
+      <%= s.text_field :keywords, class: "form-control", placeholder: "Title, Author, Etc." %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 mb-3 field">
+      <%= s.label :category %><br />
+      <%= s.select :category, options_for_select(@categories), :include_blank => true %>
+    </div>
+    <div class="col-md-3 field">
+      <p><%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10, class: "form-control" %></p>
+    </div>
+    <div class="col-md-3 field">
+      <p><%= s.label :max_price, "Max Price" %> - <%= s.text_field :max_price, size: 10, class: "form-control" %></p>
+    </div>
+    <div class="col-md-3 mb-3 field">
+      <p><%= s.label :isbn_ten, "ISBN-10" %> - <%= s.text_field :isbn_ten, size: 10, class: "form-control" %></p>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= s.submit "Search", class: "btn btn-outline-primary btn-lg btn-block" %>
+  </div>
+<% end %>
+<br class="mb-4">
+<p><%= link_to 'Back', books_path %></p>

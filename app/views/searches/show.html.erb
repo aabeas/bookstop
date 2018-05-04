@@ -1,0 +1,21 @@
+<h1>Search Result</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_books.empty? %>
+
+  <p>No Records Found</p>
+
+<% else %>
+
+  <% @search.search_books.each do |c| %>
+    <br>
+    <div class="div">
+      <h3><%= c.title %></h3>
+      <p>Price: $<%= c.price %></p>
+      <p>Category: <%= c.category %></p>
+      <p>ISBN-10: <%= c.isbn_ten %></p>
+    </div>
+  <% end %>
+  
+<% end %>
